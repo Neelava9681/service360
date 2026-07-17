@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Stores voice-specific details linked to Interaction.</description>
+    <enableActivities>true</enableActivities>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <label>Voice Call</label>
+    <nameField>
+        <displayFormat>VC-{0000000}</displayFormat>
+        <label>Voice Call Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Voice Calls</pluralLabel>
+    <sharingModel>ReadWrite</sharingModel>
+    <fields>
+        <fullName>Amazon_Contact_ID__c</fullName>
+        <label>Amazon Contact ID</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>Recording_URL__c</fullName>
+        <label>Recording URL</label>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Queue_Name__c</fullName>
+        <label>Queue Name</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>ANI__c</fullName>
+        <label>ANI (Caller Number)</label>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>DNIS__c</fullName>
+        <label>DNIS</label>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Hold_Time__c</fullName>
+        <label>Hold Time (Seconds)</label>
+        <precision>18</precision>
+        <scale>0</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>Talk_Time__c</fullName>
+        <label>Talk Time (Seconds)</label>
+        <precision>18</precision>
+        <scale>0</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>Wrap_up_Time__c</fullName>
+        <label>Wrap-up Time (Seconds)</label>
+        <precision>18</precision>
+        <scale>0</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>Interaction__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Interaction</label>
+        <referenceTo>Interaction__c</referenceTo>
+        <relationshipLabel>Voice Calls</relationshipLabel>
+        <relationshipName>Voice_Calls</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+</CustomObject>

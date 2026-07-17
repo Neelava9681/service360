@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>For customers requesting a callback.</description>
+    <enableActivities>true</enableActivities>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <label>Callback Request</label>
+    <nameField>
+        <displayFormat>CB-{0000000}</displayFormat>
+        <label>Callback Request Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Callback Requests</pluralLabel>
+    <sharingModel>ReadWrite</sharingModel>
+    <fields>
+        <fullName>Requested_Time__c</fullName>
+        <label>Requested Time</label>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <label>Priority</label>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value><fullName>Low</fullName><default>false</default><label>Low</label></value>
+                <value><fullName>Medium</fullName><default>true</default><label>Medium</label></value>
+                <value><fullName>High</fullName><default>false</default><label>High</label></value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <label>Status</label>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value><fullName>Pending</fullName><default>true</default><label>Pending</label></value>
+                <value><fullName>In Progress</fullName><default>false</default><label>In Progress</label></value>
+                <value><fullName>Completed</fullName><default>false</default><label>Completed</label></value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Assigned_Agent__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Assigned Agent</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Callback_Requests</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Callback Requests</relationshipLabel>
+        <relationshipName>Callback_Requests</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Related_Case__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Related Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Callback Requests</relationshipLabel>
+        <relationshipName>Callback_Requests</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+</CustomObject>

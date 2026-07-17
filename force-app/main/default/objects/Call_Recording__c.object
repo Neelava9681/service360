@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Stores metadata for recordings.</description>
+    <enableActivities>true</enableActivities>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <label>Call Recording</label>
+    <nameField>
+        <displayFormat>CR-{0000000}</displayFormat>
+        <label>Call Recording Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Call Recordings</pluralLabel>
+    <sharingModel>ReadWrite</sharingModel>
+    <fields>
+        <fullName>Recording_URL__c</fullName>
+        <label>Recording URL</label>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Recording_Length__c</fullName>
+        <label>Recording Length (Seconds)</label>
+        <precision>18</precision>
+        <scale>0</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>Storage_Location__c</fullName>
+        <label>Storage Location</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>Voice_Call__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Voice Call</label>
+        <referenceTo>Voice_Call__c</referenceTo>
+        <relationshipLabel>Call Recordings</relationshipLabel>
+        <relationshipName>Call_Recordings</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+</CustomObject>

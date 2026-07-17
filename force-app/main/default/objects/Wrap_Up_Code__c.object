@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Stores call outcomes.</description>
+    <enableActivities>true</enableActivities>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <label>Wrap Up Code</label>
+    <nameField>
+        <label>Wrap Up Code Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Wrap Up Codes</pluralLabel>
+    <sharingModel>ReadWrite</sharingModel>
+    <fields>
+        <fullName>Outcome__c</fullName>
+        <label>Outcome</label>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value><fullName>Sale</fullName><default>false</default><label>Sale</label></value>
+                <value><fullName>Complaint</fullName><default>false</default><label>Complaint</label></value>
+                <value><fullName>Callback</fullName><default>false</default><label>Callback</label></value>
+                <value><fullName>Wrong Number</fullName><default>false</default><label>Wrong Number</label></value>
+                <value><fullName>Escalated</fullName><default>false</default><label>Escalated</label></value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Interaction__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Interaction</label>
+        <referenceTo>Interaction__c</referenceTo>
+        <relationshipLabel>Wrap Up Codes</relationshipLabel>
+        <relationshipName>Wrap_Up_Codes</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+</CustomObject>
