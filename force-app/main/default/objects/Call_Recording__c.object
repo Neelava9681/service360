@@ -34,10 +34,10 @@
         <type>Text</type>
     </fields>
     <fields>
-        <fullName>Voice_Call__c</fullName>
+        <fullName>VoiceCall__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <label>Voice Call</label>
-        <referenceTo>Voice_Call__c</referenceTo>
+        <referenceTo>VoiceCall</referenceTo>
         <relationshipLabel>Call Recordings</relationshipLabel>
         <relationshipName>Call_Recordings</relationshipName>
         <required>false</required>
